@@ -4,8 +4,19 @@
   path.config: "/usr/share/logstash/pipeline/main.conf"
   queue.type: memory
 
-#- pipeline.id: second_pipeline
-#  path.config: "/usr/share/logstash/pipeline/second.conf"
-#  queue.type: persisted
-#  pipeline.batch.size: 125
-#  queue.page_capacity: 50mb
+- pipeline.id: coin_gecko
+  path.config: "/usr/share/logstash/pipeline/coin_gecko.conf"
+  queue.type: memory
+
+- pipeline.id: coin_gecko2
+  path.config: "/usr/share/logstash/pipeline/coin_gecko2.conf"
+  queue.type: memory
+
+# - pipeline.id: pubsub_ideas
+#   path.config: "/usr/share/logstash/pipeline/pubsub_ideas.conf"
+#   queue.type: memory
+
+# - pipeline.id: mongo_news
+#   path.config: "/usr/share/logstash/pipeline/mongo_news.conf"
+#   queue.type: memory
+
